@@ -1,0 +1,24 @@
+.container{
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    margin-left: 30vh;
+    margin-right: 30vh;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 2px -2px rgba(0,0,0,.2);
+    height: 20vh;
+}
+.c-logo{
+    border-radius: 3rem;
+}
+.l-container{
+    flex: 4;
+    justify-content: flex-start;
+}
+.r-container{
+    flex: 1;
+}
+.c-title{
+    color: rgb(153, 169, 177);
+}

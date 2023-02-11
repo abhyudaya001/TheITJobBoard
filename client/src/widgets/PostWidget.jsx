@@ -1,3 +1,7 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import React, { useEffect } from "react";
+import { useAnimation } from "framer-motion";
 import "./index.css";
 const PostWidget = ({
   companyName,
@@ -8,10 +12,26 @@ const PostWidget = ({
   jobType,
   logoUrl,
 }) => {
+  const { ref, inView } = useInView({ threshold: 0.2 });
+  const animation = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        opacity: 1,
+        transition: {
+          duration: 0.8,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({ opacity: 0 });
+    }
+  }, [animation, inView]);
   return (
-    <div className="parent">
-      <div
+    <div ref={ref} className="parent">
+      <motion.div
         className="container"
+        animate={animation}
         onClick={() => (window.location.href = jobUrl)}
       >
         <div className="l-container">
@@ -39,7 +59,7 @@ const PostWidget = ({
             alt="logo"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

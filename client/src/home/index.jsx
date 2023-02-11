@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useAnimation } from "framer-motion";
-import PostWidget from "../widgets/PostWidget";
 import LatestJobs from "../jobs/latest";
 import { useMediaQuery } from "@mui/material";
 
@@ -25,7 +24,7 @@ const Homepage = () => {
     if (!inView) {
       animation.start({ x: "-100vw" });
     }
-  }, [inView]);
+  }, [animation, inView]);
   return (
     <div className="home">
       <div ref={ref} className="template">

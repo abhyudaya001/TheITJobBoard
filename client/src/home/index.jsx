@@ -7,7 +7,10 @@ import { useEffect } from "react";
 import { useAnimation } from "framer-motion";
 import PostWidget from "../widgets/PostWidget";
 import LatestJobs from "../jobs/latest";
+import { useMediaQuery } from "@mui/material";
+
 const Homepage = () => {
+  const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const { ref, inView } = useInView({ threshold: 0.2 });
   const animation = useAnimation();
   useEffect(() => {
@@ -24,7 +27,7 @@ const Homepage = () => {
     }
   }, [inView]);
   return (
-    <>
+    <div className="home">
       <div ref={ref} className="template">
         <div className="temp-left" animate={animation}>
           <div className="t-l-text">
@@ -36,16 +39,18 @@ const Homepage = () => {
             that suits you and apply with ease.
           </div>
         </div>
-        <motion.div className="temp-right" animate={animation}>
-          <img src={Corp} alt="" className="corp-img" />
-          <img src={CorpBg} alt="" className="corp-bg-img" />
-        </motion.div>
+        {isNonMobileScreens && (
+          <motion.div className="temp-right" animate={animation}>
+            <img src={Corp} alt="" className="corp-img" />
+            <img src={CorpBg} alt="" className="corp-bg-img" />
+          </motion.div>
+        )}
       </div>
       <div className="trending-jobs">
         <div className="top-jobs-title">Top Jobs</div>
         <LatestJobs />
       </div>
-    </>
+    </div>
   );
 };
 export default Homepage;

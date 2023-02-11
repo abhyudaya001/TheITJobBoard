@@ -1,40 +1,44 @@
 .template{
     margin-top: 10px;
     display: flex;
+    padding-bottom: 20px;
 }
 .temp-left{
+    float: left;
     margin-top: 70px;
     margin-left: 50px;
-    margin-right: 60px;
-    height: 550px;
-    width: 800px;
-    flex: 1;
+    /* margin-right: 60px; */
+    flex: 3;
 }
-.corp-bg-img{
-    position: absolute;
-    justify-content: flex-end;
-    z-index: 1;
-    height: 550px;
-    width: 700px;
+.temp-right {
+  display: flex;
+  flex: 1;
+  width: 750px;
+  position: relative;
+  height: 500px;
+  margin-right: 2rem;
+  justify-content: flex-end;
 }
-.corp-img{
-    position: absolute;
-    height: 550px;
-    width: 800px;
-    z-index: 2;
-    transform: scaleX(-1);
-    justify-content: flex-end;
+.corp-bg-img {
+  height: 500px;
+  width: 750px;
+  justify-content: flex-end;
+  z-index: 1;
 }
-.temp-right{
-    padding-right: 10px;
-    display: flex;
-    flex: 1;
-    position: relative;
-    justify-content: flex-end;
-    margin-right: 2rem;
+
+.corp-img {
+  height: 500px;
+  width: 750px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleX(-1);
+  justify-content: flex-end;
+  z-index: 2;
 }
+
 .t-l-text{
-    font-size: 55px;
+    font-size: 8vh;
     font-weight: bold;
 }
 .text-blue{
@@ -49,4 +53,14 @@
     margin-left: 50px;
     margin-right: 60px;
     font-size: 55px;;
+}
+.trending-jobs{
+    position: relative;
+    margin-top: 20px;
+}
+.home{
+    padding-bottom: 20px;
+}
+@media screen {
+    
 }

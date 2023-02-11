@@ -19,7 +19,7 @@ export const navItems = [
   },
   {
     id: 4,
-    title: "Contact Us",
+    title: "Post Jobs",
     path: "./contactus",
     cName: "nav-item",
   },

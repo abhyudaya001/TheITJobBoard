@@ -26,7 +26,7 @@ const Navbar = () => {
                     className={item.cName}
                     onClick={() => setDropdown(!dropdown)}
                   >
-                    <Link to={item.path}>{item.title}</Link>
+                    <Link>{item.title}</Link>
                     {dropdown && <Dropdown />}
                   </li>
                 );
@@ -48,7 +48,7 @@ const Navbar = () => {
       {!isNonMobileScreens && (
         <div className="navbar">
           <Link to="/" className="navbar-logo">
-            TheITJobBoard
+            ITJB
           </Link>
           <div
             class={burger ? "menu-btn open" : "menu-btn"}

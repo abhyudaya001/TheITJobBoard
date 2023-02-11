@@ -4,14 +4,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 .navbar-logo{
+    padding-left: 2rem;
     color: red;
     text-decoration: none;
     font-size: 2rem;
     display: flex;
     align-items: center;
+    flex: 1;
     justify-content: space-between;
     width: 10rem;
 }
@@ -19,7 +22,7 @@
 display: flex;
 text-align: center;
 list-style: none;
-width: 70vw;
+flex: 1;
 justify-content: flex-end;
 margin-right: 2rem;
 }
@@ -35,8 +38,8 @@ margin-right: 2rem;
     margin-right: 2rem;
 }
 .jobs-submenu{
-    width: 10rem;
-    top: 75px;
+    z-index: 2;
+    top: 80px;
     position: absolute;
     list-style: none;
     text-align: start;

@@ -9,6 +9,7 @@
     /* border: 3px solid #fff; */
   }
   .menu-btn__burger {
+    margin-right: 2rem;
     width: 50px;
     height: 6px;
     background: #000000;

@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/jobs",postRoutes);
 app.use("/internships",getInternship);
+// app.post("/postrequest")
 const PORT=process.env.PORT||6001;
 mongoose.connect(process.env.MONGO_URL,{
     useNewUrlParser: true,

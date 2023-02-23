@@ -15,7 +15,7 @@ const Navbar = () => {
       {isNonMobileScreens && (
         <div className="navbar">
           <Link to="/" className="navbar-logo">
-            TheITJobBoard
+            ITJobBoard
           </Link>
           <ul className="nav-items">
             {navItems.map((item) => {

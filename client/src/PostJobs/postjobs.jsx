@@ -25,24 +25,15 @@ const PostJobs = () => {
   const formwindow = pageType === "post";
   const formsubmitwindow = pageType === "post-done";
   const postjobs = async (values, onSubmitProps) => {
-    // let formData = new FormData();
-    // for (let value in values) {
-    //   console.log(value, values[value]);
-    //   formData.append(value, values[value]);
-    // }
-    // console.log(formData);
-    const formData = new FormData();
-    formData.append("companyName", "John");
-    formData.append("experienceRequired", "john@example.com");
     const savedPostResponse = await fetch("http://localhost:3001/postjob", {
       method: "POST",
-      body: formData,
+      body: JSON.stringify(values),
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "application/json",
       },
     });
     const posted = await savedPostResponse.json();
-    // onSubmitProps.resetForm();
+    onSubmitProps.resetForm();
     if (posted) {
       setPageType("post-done");
     }

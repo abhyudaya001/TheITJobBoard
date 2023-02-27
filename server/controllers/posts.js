@@ -1,7 +1,10 @@
 import Post from "../model/posts.js"
 export const createJob=async(req,res)=>{
+    console.log("hey");
     try{
+        console.log(req);
         const{companyName,experienceRequired,eligibilityCriteria,jobDescription,jobUrl,jobType,logoUrl} = req.body;
+        console.log(experienceRequired);
         const newJob=new Post({
             companyName,
             experienceRequired,
